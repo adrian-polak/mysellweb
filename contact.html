@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start a Project | MySellWeb</title>
+  <meta name="description" content="Tell me about your business and your project. Get a reply about your website or graphic design enquiry in a day or two.">
+  <meta property="og:title" content="Start a Project | MySellWeb">
+  <meta property="og:description" content="Tell me about your business and your project.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.yourdomain.com/contact.html">
+
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">MySellWeb<span class="dot">.</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Start a Project</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary btn-block">Start a Project</a>
+      <div class="mobile-menu-foot">
+        <a href="mailto:your@email.com">your@email.com</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Start a Project</h1>
+        <p>Tell me about your business and what you need. I read every enquiry myself and reply in a day or two.</p>
+      </div>
+    </div>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="contact-layout">
+
+          <div>
+            <!-- Success message, shown by js/main.js after the form submits -->
+            <div class="form-success" role="status">
+              <h3>Thanks. Your project details are in.</h3>
+              <p>I'll get back to you in a day or two. If it's urgent, email me directly using the address below.</p>
+            </div>
+
+            <!-- ============================================================
+                 CONTACT FORM
+                 This is a static site, so this form does not send email on
+                 its own yet. See the detailed comment inside js/main.js
+                 (search for "CONTACT FORM") for three ways to connect it:
+                 Formspree, Netlify Forms, or your own backend.
+
+                 Quick start with Formspree:
+                   1. Create a form at https://formspree.io
+                   2. Replace the action URL below with your endpoint.
+                   3. Remove the preventDefault() block in js/main.js.
+                 ============================================================ -->
+            <form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+
+              <!-- Honeypot field — keep this hidden input in place to catch simple spam bots.
+                   Real visitors never see or fill it, since it is hidden with CSS. -->
+              <div style="position:absolute; left:-9999px;" aria-hidden="true">
+                <label for="company">Leave this field empty</label>
+                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@business.com" required autocomplete="email">
+                </div>
+                <div class="field">
+                  <label for="business">Business name</label>
+                  <input type="text" id="business" name="business" placeholder="Your business or brand name" required autocomplete="organization">
+                </div>
+                <div class="field">
+                  <label for="website">Website URL <span class="optional">(optional)</span></label>
+                  <input type="url" id="website" name="website" placeholder="https://your-current-site.com" autocomplete="url">
+                </div>
+              </div>
+
+              <fieldset class="field full" style="border: none; padding: 0;">
+                <legend style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: var(--space-3); padding: 0;">What service are you interested in?</legend>
+                <div class="radio-group" role="radiogroup" aria-label="Service interested in">
+                  <label class="radio-pill">
+                    <input type="radio" name="service" value="Website" required>
+                    <span>Website</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="service" value="Graphic Design">
+                    <span>Graphic Design</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="service" value="Website + Branding">
+                    <span>Website + Branding</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="service" value="Other">
+                    <span>Other</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="field full" style="border: none; padding: 0; margin-top: var(--space-6);">
+                <legend style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: var(--space-3); padding: 0;">Estimated budget</legend>
+                <div class="radio-group" role="radiogroup" aria-label="Estimated budget">
+                  <label class="radio-pill">
+                    <input type="radio" name="budget" value="€100–€300" required>
+                    <span>€100–€300</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="budget" value="€300–€600">
+                    <span>€300–€600</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="budget" value="€600–€1,000">
+                    <span>€600–€1,000</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="budget" value="€1,000+">
+                    <span>€1,000+</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="field full" style="margin-top: var(--space-6);">
+                <label for="description">Project description</label>
+                <textarea id="description" name="description" placeholder="What are you building? Who's it for, and what should the site or graphics achieve?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Send Project Details</button>
+              <p class="form-note">By submitting, you agree to be contacted about your enquiry. Your details never get shared with anyone else.</p>
+            </form>
+          </div>
+
+          <aside class="contact-side reveal">
+            <h3>Prefer to reach out directly?</h3>
+            <ul>
+              <li>
+                <span>Email</span>
+                <!-- REPLACE ME: your real email -->
+                <a href="mailto:your@email.com">your@email.com</a>
+              </li>
+              <li>
+                <span>Instagram</span>
+                <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a>
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">/in/yourhandle</a>
+              </li>
+            </ul>
+            <hr>
+            <h3>Response time</h3>
+            <p class="text-muted" style="font-size: var(--fs-sm); line-height: var(--lh-relaxed);">Enquiries usually get a reply in a day or two. Longer or more detailed projects sometimes take extra time to scope properly.</p>
+          </aside>
+
+        </div>
+
+        <div class="contact-alt reveal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6l9 6 9-6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <!-- REPLACE ME: your real email -->
+          <span>Prefer email? Reach me directly at <a href="mailto:your@email.com">your@email.com</a></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">MySellWeb<span class="dot">.</span></a>
+          <p>A one-person design and development studio, building websites and visuals for small and local businesses.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Web Design</a></li>
+            <li><a href="services.html">Graphic Design</a></li>
+            <li><a href="services.html">Branding</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:your@email.com">your@email.com</a></li>
+            <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> MySellWeb. All rights reserved.</span>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
